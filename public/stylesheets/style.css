@@ -1,0 +1,281 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 255;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+}
+
+/*===  BASE ============================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-items-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-items-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section header {
+  margin-bottom: 0.5rem;
+}
+
+.section header strong {
+  color: var(--base-color);
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.title {
+  font: 700 1.5rem 'Poppins', sans-serif;
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  cursor: pointer;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border-radius: 0.25rem;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--base-color-alt);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 5rem;
+
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 10px 10px gray;
+  margin-bottom: 2rem;
+  display: flex;
+}
+
+#header .menu {
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+#header .menu a.user{
+  color: black;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+#header .menu a i{
+  font-size: 4rem;
+}
+
+#header .menu a.user span{
+  font-size: 2.5rem;
+}
+
+#header .menu a.mail{
+  color: black;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+main{
+  margin: 7rem 2rem
+}
+
+#saldo {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+
+#saldo header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#saldo header h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#saldo header i {
+  font-size: 2rem;
+  color: black;
+}
+
+#saldo .content p {
+  font-size: 2rem;
+  color: black;
+}
+
+#saldo footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+#saldo footer p {
+  color: black;
+  font-size: 1rem;
+}
+
+#utilidades {
+  padding-left: 0.5rem;
+  padding-right:0.5rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+
+#utilidades .cards {
+  gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#utilidades .cards .nav{
+  width: 12.5%;
+  font-size: 2rem;
+  color: black;
+}
+
+#utilidades .cards .card{
+  width: 25%;
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+#utilidades .cards .card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: .5rem;
+}
+
+#utilidades .cards .card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+#utilidades .cards .card p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 0.75rem;
+}
+
+#investimentos {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+
+#investimentos header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#investimentos header h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#investimentos .content {
+  display: grid;
+  gap: 0.5rem;
+}
+
+#investimentos .content a{
+  background-color: var(--body-color);
+  border-radius: .5rem;
+  padding: .5rem;
+  margin: 0;
+}
